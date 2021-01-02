@@ -8,7 +8,28 @@ Check if the API is working by GET `/api/newdeveloper`. This should show "unauth
 
 For retrieving the lights use GET `/api/lights`.
 
-## Build Setup
+## Build setup (with Docker, recommended)
+Make sure you have [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed!
+
+### Development
+```bash
+# Build the Docker image
+$ docker-compose build
+
+# Run the webserver
+$ docker-compose up -d
+```
+
+### Production
+```bash
+# Build the Docker image
+$ docker-compose build
+
+# Run the webserver, with the docker-compose override for production
+$ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
+
+## Build Setup (without Docker)
 
 ```bash
 # install dependencies
