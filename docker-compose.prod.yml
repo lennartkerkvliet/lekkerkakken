@@ -1,0 +1,9 @@
+version: "3.4"
+services:
+  webserver:
+    build:
+      target: production
+    command: sh /app/docker/entrypoint.production.sh
+    volumes:
+    environment:
+      PRODUCTION: 'true'

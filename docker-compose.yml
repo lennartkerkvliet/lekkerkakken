@@ -4,7 +4,11 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-      target: production
-    command: sh /app/docker/entrypoint.production.sh
+      target: development
+    command: sh /app/docker/entrypoint.development.sh
+    volumes:
+    - .:/app
     ports:
       - 3000:3000
+    environment:
+      DEBUG: 'true'

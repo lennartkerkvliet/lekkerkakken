@@ -5,6 +5,8 @@ COPY ./package.json ./
 
 RUN npm install --no-progress
 
+FROM dependencies AS development
+
 FROM dependencies AS production
 COPY . /app
 RUN npm run build
