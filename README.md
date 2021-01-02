@@ -25,8 +25,8 @@ $ docker-compose up -d
 # Build the Docker image
 $ docker-compose build
 
-# Run the webserver, with the docker-compose override for production
-$ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+# Run the webserver, with the docker-compose file for production
+$ docker-compose -f docker-compose.prod.yml up -d
 ```
 
 ## Build Setup (without Docker)
