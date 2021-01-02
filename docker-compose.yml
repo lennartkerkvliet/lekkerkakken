@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    command: sh /app/docker/entrypoint.production.sh
+    ports:
+      - 3000:3000
