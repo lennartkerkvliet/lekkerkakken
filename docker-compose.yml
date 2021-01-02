@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: development
+    command: sh /app/docker/entrypoint.development.sh
+    volumes:
+    - .:/app
+    ports:
+      - 3000:3000
+    environment:
+      DEBUG: 'true'
