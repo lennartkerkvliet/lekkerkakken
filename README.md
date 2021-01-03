@@ -23,7 +23,7 @@ $ docker-compose up -d
 ### Production
 ```bash
 # Build the Docker image
-$ docker-compose build
+$ docker-compose -f docker-compose.prod.yml build
 
 # Run the webserver, with the docker-compose file for production
 $ docker-compose -f docker-compose.prod.yml up -d
