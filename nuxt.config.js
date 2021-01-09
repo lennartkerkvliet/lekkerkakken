@@ -40,9 +40,5 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  },
-
-  loaders: [
-    { test: /\.js$/, exclude: /node_modules/, loader: 'babel' }
-  ]
+  }
 }
